@@ -1,4 +1,4 @@
-logilab-common>=0.58.2
-django-jenkins
+http://download.logilab.org/pub/common/logilab-common-0.58.2.tar.gz
+-e git+git://github.com/kmmbvnr/django-jenkins.git#egg=django-jenkins
 pyflakes
 pep8

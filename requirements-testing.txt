@@ -1,0 +1,4 @@
+logilab-common>=0.58.2
+django-jenkins
+pyflakes
+pep8

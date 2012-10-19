@@ -14,7 +14,15 @@ class Task(models.Model):
 
     user = models.ForeignKey(User, related_name='tasks')
     name = models.CharField('Task Name', max_length=200, blank=False)
+    archived = models.BooleanField('Archived?', default=False)
     created = models.DateTimeField('Created Date/Time', auto_now_add=True)
+
+    @property
+    def total_time(self):
+        entries = self.entries.filter(type=TimeEntry.TYPE_ON).count()
+        if entries:
+            return entries * 15
+        return 0
 
     def __unicode__(self):
         if self.name:
@@ -51,5 +59,5 @@ class TimeEntry(models.Model):
         return 0
 
     def __unicode__(self):
-        return u'%s - %s %s' % (self.task.name, self.date, 
+        return u'%s - %s %s' % (self.task.name, self.date,
                                 self.get_segment_time())

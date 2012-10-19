@@ -19,6 +19,7 @@ pip-log.txt
 # Unit test / coverage reports
 .coverage
 .tox
+reports
 
 #Translations
 *.mo
@@ -31,3 +32,4 @@ pip-log.txt
 
 #databases
 *.sqlite3
+

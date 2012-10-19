@@ -18,7 +18,3 @@ class TaskTest(unittest.TestCase):
     def testBadCreation(self):
         with self.assertRaises(IntegrityError):
             Task.objects.create(name='Bad Test')
-        with self.assertRaises(IntegrityError):
-            Task.objects.create(user=self.user)
-        with self.assertRaises(IntegrityError):
-            Task.objects.create()

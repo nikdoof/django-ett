@@ -6,7 +6,7 @@ Django webapp implementation of the "Emergent Task Timer"
 What is a "Emergent Task Timer"
 -------------------------------
 
-[David Seah], back in 2006, took a existing idea of using a egg timer and a todo list to track the time that tasks take and created a quick and easy way to track and monitor your time over the course of a day. He [wrote](http://davidseah.com/blog/2006/04/the-printable-ceo-iii-emergent-task-timing/) a very detail post about the subject and describes how splitting your time into 15 minute segments can make it simple to keep you control of your working time.
+[David Seah](http://davidseah.com/), back in 2006, took a existing idea of using a egg timer and a todo list to track the time that tasks take and created a quick and easy way to track and monitor your time over the course of a day. He [wrote](http://davidseah.com/blog/2006/04/the-printable-ceo-iii-emergent-task-timing/) a very detail post about the subject and describes how splitting your time into 15 minute segments can make it simple to keep you control of your working time.
 
 Out of this he developed a sheet to write down his results, and a associated [Flash prototype](http://davidseah.com/tools/ett/alpha). Unfortunatly he was unable to continue developing this app has his needs had already been met, he did release the [source code](http://davidseah.com/blog/2010/01/releasing-the-ett-online-to-creative-commons/) but little development has been done since.
 

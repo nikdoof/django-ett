@@ -28,3 +28,6 @@ pip-log.txt
 
 #Virtualenv
 .env
+
+#databases
+*.sqlite3

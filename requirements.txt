@@ -1,2 +1,4 @@
 django>=1.4.2
 south>=0.7.6
+django-tastypie>=0.9.11
+fabric>=1.4.3

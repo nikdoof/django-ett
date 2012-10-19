@@ -15,7 +15,7 @@ class Task(models.Model):
     user = models.ForeignKey(User, related_name='tasks')
     name = models.CharField('Task Name', max_length=200, blank=False)
     created = models.DateTimeField('Created Date/Time', auto_now_add=True)
-    
+
     def __unicode__(self):
         if self.name:
             return self.name
@@ -30,25 +30,26 @@ class TimeEntry(models.Model):
     TYPE_OFF = 1
     TYPE_ON = 2
     TYPE_STRIKE = 3
-    
+
     TYPE_CHOICES = (
         (TYPE_OFF, 'Off'),
         (TYPE_ON, 'On'),
         (TYPE_STRIKE, 'Strike'),
     )
-    
+
     task = models.ForeignKey(Task, related_name='entries')
     type = models.IntegerField('Type', choices=TYPE_CHOICES, default=TYPE_OFF)
     date = models.DateField('Date')
     segment = models.IntegerField('Segment')
-    
+
     created = models.DateTimeField('Created Date/Time', auto_now_add=True)
     updated = models.DateTimeField('Updated Date/Time', auto_now=True)
-    
+
     def get_segment_time(self):
         if segment:
             return self.segment * 15
         return 0
-    
+
     def __unicode__(self):
-        return u'%s - %s %s' % (self.task.name, self.date, self.get_segment_time())
+        return u'%s - %s %s' % (self.task.name, self.date, 
+                                self.get_segment_time())

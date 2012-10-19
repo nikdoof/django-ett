@@ -24,12 +24,13 @@ class TaskTest(TestCase):
 
     def testTotalTime(self):
         self.assertEqual(self.task.total_time, 0)
-        entry = TimeEntry.objects.create(task=self.task, type=TimeEntry.TYPE_ON, date=now(), segment=10)
+        TimeEntry.objects.create(task=self.task, type=TimeEntry.TYPE_ON, date=now(), segment=10)
         self.assertEqual(self.task.total_time, 15)
-        entry2 = TimeEntry.objects.create(task=self.task, type=TimeEntry.TYPE_OFF, date=now(), segment=11)
+        TimeEntry.objects.create(task=self.task, type=TimeEntry.TYPE_OFF, date=now(), segment=11)
         self.assertEqual(self.task.total_time, 15)
-        entry3 = TimeEntry.objects.create(task=self.task, type=TimeEntry.TYPE_ON, date=now(), segment=12)
+        TimeEntry.objects.create(task=self.task, type=TimeEntry.TYPE_ON, date=now(), segment=12)
         self.assertEqual(self.task.total_time, 30)
+
 
 class TaskDetailViewTest(TestCase):
 

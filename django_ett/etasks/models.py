@@ -54,7 +54,7 @@ class TimeEntry(models.Model):
     updated = models.DateTimeField('Updated Date/Time', auto_now=True)
 
     def get_segment_time(self):
-        if segment:
+        if self.segment > 0:
             return self.segment * 15
         return 0
 
